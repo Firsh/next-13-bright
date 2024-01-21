@@ -2,16 +2,16 @@
 import React from "react";
 export default function Revealable({ children }) {
 	const [
-		isChildShown,
-		setChildShown,
+		isRevealed,
+		setIsRevealed,
 	] = React.useState(false);
-	return isChildShown ?
+	return isRevealed ?
 		children
 		: (
 			<div className="reveal">
 				<button
 					onClick={
-						() => setChildShown(true)
+						() => setIsRevealed(true)
 					}
 				>
 					Reveal Content
